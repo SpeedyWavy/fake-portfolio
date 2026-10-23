@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de João Silva — Desenvolvedor Full-Stack Pleno com 4 anos de experiência em aplicações web escaláveis." />
+  <title>João Silva | Desenvolvedor Full-Stack</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== CURSOR PERSONALIZADO ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NAVEGAÇÃO FIXA ===== -->
+  <header class="nav" id="nav">
+    <a href="#" class="nav__logo">JS<span class="accent">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav__menu" id="navMenu">
+      <ul class="nav__list">
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="#experiencia" class="nav__link">Experiência</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <!-- Partículas decorativas de fundo -->
+    <div class="hero__particles" id="heroParticles"></div>
+
+    <div class="hero__content">
+      <p class="hero__greeting animate-in" style="--delay: 0.2s">Olá, eu sou</p>
+
+      <h1 class="hero__name animate-in" style="--delay: 0.4s">
+        João <span class="highlight">Silva</span><span class="accent">.</span>
+      </h1>
+
+      <h2 class="hero__role animate-in" style="--delay: 0.6s">
+        Desenvolvedor Full-Stack Pleno
+      </h2>
+
+      <p class="hero__bio animate-in" style="--delay: 0.8s">
+        Desenvolvedor Full-Stack com 4 anos de experiência na criação de
+        aplicações web escaláveis. Apaixonado por resolver problemas complexos
+        através de código limpo e arquiteturas eficientes.
+      </p>
+
+      <div class="hero__cta animate-in" style="--delay: 1s">
+        <a href="#projetos" class="btn btn--primary" id="ctaProjects">
+          Ver projetos
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contato" class="btn btn--outline" id="ctaContact">Fale comigo</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll animate-in" style="--delay: 1.4s">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO SOBRE ===== -->
+  <section class="section sobre" id="sobre">
+    <div class="section__container">
+      <p class="section__label scroll-reveal">Conheça mais</p>
+      <h2 class="section__title scroll-reveal">Sobre mim</h2>
+
+      <div class="sobre__grid">
+        <div class="sobre__text scroll-reveal">
+          <p>
+            Sou um desenvolvedor apaixonado por transformar ideias em produtos digitais.
+            Com 4 anos de experiência, já trabalhei em projetos que vão desde APIs RESTful
+            de alta performance até interfaces ricas e responsivas. Meu foco está em
+            escrever código limpo, escalável e bem documentado.
+          </p>
+          <p>
+            Quando não estou programando, gosto de contribuir com projetos open-source,
+            explorar novas tecnologias e compartilhar conhecimento com a comunidade.
+          </p>
+        </div>
+
+        <div class="sobre__stack scroll-reveal">
+          <h3 class="sobre__stack-title">Tech Stack</h3>
+          <div class="stack-grid">
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="2.5" fill="currentColor"/><ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(120 12 12)"/></svg>
+              <span>React</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 21.985c-.275 0-.532-.074-.772-.202l-2.439-1.448c-.365-.203-.182-.275-.072-.318.496-.165.588-.201 1.101-.493.056-.027.129-.015.185.017l1.87 1.12c.074.036.166.036.221 0l7.319-4.237c.074-.036.11-.11.11-.202V7.768c0-.091-.036-.166-.11-.202l-7.319-4.219c-.073-.037-.166-.037-.221 0L4.552 7.566c-.073.037-.11.128-.11.203v8.457c0 .073.037.165.11.201l2.005 1.157c1.082.548 1.762-.091 1.762-.716V8.463c0-.11.091-.221.22-.221h.936c.108 0 .22.092.22.221v8.404c0 1.412-.769 2.222-2.107 2.222-.403 0-.732 0-1.633-.44l-1.927-1.103A1.542 1.542 0 0 1 3.3 16.225V7.768c0-.567.293-1.082.772-1.375l7.319-4.237c.457-.257 1.084-.257 1.541 0l7.319 4.237c.479.293.772.808.772 1.375v8.457c0 .567-.293 1.082-.772 1.375l-7.319 4.237c-.221.11-.479.148-.732.148z"/></svg>
+              <span>Node.js</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M9.585 11.692h.065l2.06 3.375-.108.062h-4.03l2.013-3.437zm7.547-7.034L12.12 2l-5.012 2.658L2 7.315v9.37L12.12 22l10.12-5.315V7.315l-5.108-2.657zm-1.204 12.25h-2.31l-1.28-2.166-1.278-2.152-1.298 2.152-1.28 2.166H6.17l2.558-4.318-2.503-4.271h2.31l1.225 2.104L11 12.47l1.258-2.145 1.223-2.104h2.31l-2.5 4.271 2.558 4.318h.079z"/></svg>
+              <span>Python</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.186 6.186 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.032-.863.104-.296.072-.583.16-.863.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.024c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.152c.95 0 1.644.216 2.091.647.44.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.75-.519a1.46 1.46 0 0 0 .32-.583c.04-.16.072-.352.072-.575v-.279a6.503 6.503 0 0 0-.735-.136 6.073 6.073 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.216-.39.527-.39.942 0 .39.095.678.295.878.191.2.47.295.806.295v.149zm6.408.552c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311l-1.876-6.172a1.398 1.398 0 0 1-.072-.335c0-.128.064-.2.191-.2h.783c.152 0 .256.025.304.08.064.048.112.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.152-.312a.53.53 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.53.53 0 0 1 .303-.08h.743c.128 0 .2.064.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.216l-1.923 6.172c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.319-.08s-.12-.16-.152-.32L13.233 6.6l-1.244 5.2c-.04.16-.088.264-.152.32-.064.056-.176.08-.32.08h-.687zm10.256.215c-.415 0-.83-.048-1.229-.152-.399-.104-.71-.216-.918-.344-.128-.08-.216-.168-.247-.248a.615.615 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247a.46.46 0 0 1 .144.024c.048.016.12.048.2.08.27.12.566.216.878.288.32.072.631.104.951.104.503 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.152-.415-.288-.807-.416l-1.157-.36c-.583-.183-1.014-.456-1.277-.822a1.956 1.956 0 0 1-.4-1.189c0-.343.073-.647.224-.91.152-.264.35-.495.606-.678.256-.192.543-.327.878-.432.336-.104.687-.152 1.063-.152.191 0 .39.008.59.032.208.024.399.056.582.088.176.04.343.08.503.128.16.048.287.096.384.144.128.064.224.128.279.2.056.064.08.16.08.288v.375c0 .168-.064.256-.184.256a.834.834 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.072-1.062.223-.248.152-.375.383-.375.695 0 .224.08.415.247.567.168.152.479.304.926.44l1.134.358c.574.184.99.44 1.237.77.248.327.367.702.367 1.117 0 .343-.072.655-.207.926a2.173 2.173 0 0 1-.59.71c-.256.2-.559.352-.91.455-.36.12-.743.175-1.158.175z"/></svg>
+              <span>AWS</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.008.028zm-8.983-8.7h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.594-.466-.837-.855-.06-.094-.105-.17-.12-.17l-1.83 1.128c.3.6.756 1.126 1.341 1.456.876.487 2.055.611 3.3.3.804-.254 1.497-.87 1.838-1.66.534-1.17.39-2.614.384-4.314.015-1.96.009-3.93.009-5.895l-.124.014z"/></svg>
+              <span>JavaScript</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0H1.125zm17.363 9.75c.612 0 1.154.037 1.677.112a6.772 6.772 0 0 1 1.519.353v2.756a3.41 3.41 0 0 0-.713-.472 5.735 5.735 0 0 0-2.46-.556c-.346 0-.655.047-.944.147a.97.97 0 0 0-.517.38c-.096.164-.143.371-.143.618 0 .342.11.619.345.862.234.243.598.467 1.105.687l.714.287c.748.312 1.356.682 1.842 1.121.487.438.847.936 1.083 1.488.236.553.354 1.19.354 1.907 0 1.107-.326 1.97-.982 2.591-.655.621-1.592.93-2.82.93-.56 0-1.145-.064-1.752-.19a6.03 6.03 0 0 1-1.718-.578v-2.967a4.2 4.2 0 0 0 1.08.712 4.55 4.55 0 0 0 1.2.41c.398.094.754.14 1.065.14.392 0 .69-.067.893-.204.203-.137.3-.373.3-.71 0-.24-.075-.445-.224-.623-.149-.177-.39-.347-.723-.511-.333-.164-.76-.356-1.289-.575-1.075-.49-1.82-1.058-2.241-1.7-.42-.643-.63-1.414-.63-2.319 0-.727.16-1.355.48-1.887a3.235 3.235 0 0 1 1.394-1.272c.606-.307 1.332-.46 2.181-.46z M4.575 10.5h3.6V24h-3.6V10.5zm1.8-1.5a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2z"/></svg>
+              <span>TypeScript</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+              <span>Docker</span>
+            </div>
+            <div class="stack-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO PROJETOS ===== -->
+  <section class="section projetos" id="projetos">
+    <div class="section__container">
+      <p class="section__label scroll-reveal">Meu trabalho</p>
+      <h2 class="section__title scroll-reveal">Projetos</h2>
+
+      <div class="projetos__grid">
+        <!-- Projeto 1 -->
+        <article class="project-card scroll-reveal">
+          <div class="project-card__image">
+            <img src="assets/project-dashboard.jpg" alt="Dashboard Analytics — painel de métricas em tempo real" loading="lazy" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn btn--sm btn--primary" id="proj1Demo" target="_blank" rel="noopener">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--outline" id="proj1Code" target="_blank" rel="noopener">Código</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">Dashboard Analytics</h3>
+            <p class="project-card__desc">
+              Painel de métricas em tempo real com gráficos interativos,
+              filtros dinâmicos e exportação de relatórios. Desenvolvido com
+              React, Node.js e PostgreSQL.
+            </p>
+            <div class="project-card__tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Chart.js</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project-card scroll-reveal">
+          <div class="project-card__image">
+            <img src="assets/project-ecommerce.jpg" alt="E-commerce Platform — loja online completa" loading="lazy" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn btn--sm btn--primary" id="proj2Demo" target="_blank" rel="noopener">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--outline" id="proj2Code" target="_blank" rel="noopener">Código</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">E-commerce Platform</h3>
+            <p class="project-card__desc">
+              Loja online completa com carrinho, checkout, integração com
+              gateway de pagamento e painel administrativo. Stack: Next.js,
+              Stripe e MongoDB.
+            </p>
+            <div class="project-card__tags">
+              <span>Next.js</span>
+              <span>Stripe</span>
+              <span>MongoDB</span>
+              <span>AWS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 3 -->
+        <article class="project-card scroll-reveal">
+          <div class="project-card__image">
+            <img src="assets/project-chat.jpg" alt="Chat em Tempo Real — aplicação de mensagens" loading="lazy" />
+            <div class="project-card__overlay">
+              <a href="#" class="btn btn--sm btn--primary" id="proj3Demo" target="_blank" rel="noopener">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--outline" id="proj3Code" target="_blank" rel="noopener">Código</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">Chat em Tempo Real</h3>
+            <p class="project-card__desc">
+              Aplicação de mensagens com WebSockets, salas privadas,
+              indicadores de digitação e histórico persistente. Backend em
+              Python com FastAPI.
+            </p>
+            <div class="project-card__tags">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>WebSocket</span>
+              <span>Redis</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO EXPERIÊNCIA ===== -->
+  <section class="section experiencia" id="experiencia">
+    <div class="section__container">
+      <p class="section__label scroll-reveal">Minha trajetória</p>
+      <h2 class="section__title scroll-reveal">Experiência</h2>
+
+      <div class="timeline">
+        <!-- XP 1 -->
+        <div class="timeline__item scroll-reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2023 — Presente</span>
+            <h3 class="timeline__role">Desenvolvedor Full-Stack Pleno</h3>
+            <p class="timeline__company">TechCorp Solutions</p>
+            <ul class="timeline__list">
+              <li>Liderança técnica de squad com 5 desenvolvedores</li>
+              <li>Migração de monólito para microsserviços (redução de 40% no tempo de deploy)</li>
+              <li>Implementação de pipeline CI/CD com GitHub Actions e Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- XP 2 -->
+        <div class="timeline__item scroll-reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2021 — 2023</span>
+            <h3 class="timeline__role">Desenvolvedor Front-End</h3>
+            <p class="timeline__company">StartupX Digital</p>
+            <ul class="timeline__list">
+              <li>Desenvolvimento de SPAs com React e TypeScript</li>
+              <li>Otimização de performance (Core Web Vitals no verde)</li>
+              <li>Integração com APIs REST e GraphQL</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- XP 3 -->
+        <div class="timeline__item scroll-reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2020 — 2021</span>
+            <h3 class="timeline__role">Estagiário de Desenvolvimento</h3>
+            <p class="timeline__company">Agência WebFlow</p>
+            <ul class="timeline__list">
+              <li>Desenvolvimento de landing pages responsivas</li>
+              <li>Manutenção de projetos WordPress e Shopify</li>
+              <li>Automação de tarefas com scripts Python</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO CONTATO ===== -->
+  <section class="section contato" id="contato">
+    <div class="section__container">
+      <p class="section__label scroll-reveal">Vamos conversar</p>
+      <h2 class="section__title scroll-reveal">Contato</h2>
+
+      <div class="contato__grid">
+        <div class="contato__info scroll-reveal">
+          <p>
+            Tem um projeto em mente ou quer discutir uma oportunidade?
+            Preencha o formulário ou entre em contato pelos canais abaixo.
+            Respondo em até 24 horas.
+          </p>
+          <div class="contato__channels">
+            <a href="mailto:joao@email.com" class="contato__channel" id="contactEmail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>joao@email.com</span>
+            </a>
+            <a href="https://linkedin.com" class="contato__channel" id="contactLinkedin" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com" class="contato__channel" id="contactGithub" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contato__form scroll-reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="formName">Nome</label>
+            <input type="text" id="formName" name="name" placeholder="Seu nome" required />
+            <span class="form-error" id="formNameError">Por favor, insira seu nome.</span>
+          </div>
+          <div class="form-group">
+            <label for="formEmail">E-mail</label>
+            <input type="email" id="formEmail" name="email" placeholder="seu@email.com" required />
+            <span class="form-error" id="formEmailError">Insira um e-mail válido.</span>
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Mensagem</label>
+            <textarea id="formMessage" name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+            <span class="form-error" id="formMessageError">Por favor, escreva uma mensagem.</span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="formSubmit">
+            Enviar mensagem
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form-success" id="formSuccess">Mensagem enviada com sucesso! ✓</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <a href="#" class="nav__logo footer__logo">JS<span class="accent">.</span></a>
+      <p class="footer__copy">
+        &copy; 2024 João Silva. Desenvolvido com
+        <span class="accent">&hearts;</span> e muito café.
+      </p>
+      <div class="footer__socials">
+        <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener" id="footerGithub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener" id="footerLinkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:joao@email.com" aria-label="E-mail" id="footerEmail">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
